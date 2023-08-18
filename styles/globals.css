@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.primary-button {
+    @apply flex justify-around items-center rounded-[5px] bg-[#1E2D44] text-[#FFFFFF];
+}
+
+.secondary-button {
+    @apply rounded-[5px] bg-[#FF9801] text-[#1E2D44];
+}
+
+.para-text {
+    @apply text-[20px];
+}
