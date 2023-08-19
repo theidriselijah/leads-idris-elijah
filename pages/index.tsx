@@ -1,7 +1,6 @@
 import HeaderNav from '@/components/HeaderNav'
 import Image from 'next/image'
 import Head from 'next/head'
-import { useEffect } from 'react'
 
 export default function Home() {
   return (
@@ -20,8 +19,8 @@ export default function Home() {
       </section>
 
       {/* Lead Magnet section */}
-      <section className="bg-[#1E2D44] text-[#FFFFFF] text-center px-[20px] py-[40px]">
-        <div className="mb-[40px]">
+      <section className="bg-[#1E2D44] text-[#FFFFFF] text-center px-[20px] py-[40px] md:px-[40px] md:flex md:items-center md:gap-10">
+        <div className="mb-[40px] md:mb-0">
           <h2 className="text-[30px] mb-[20px] font-medium">
             Free Google Setup
           </h2>
@@ -72,8 +71,8 @@ export default function Home() {
       </section>
 
       {/* Local Search Section */}
-      <section className="flex flex-col justify-center items-center text-center px-[20px] py-[40px]">
-        <div className="mb-[40px] flex flex-col justify-center items-center">
+      <section className="text-center px-[20px] py-[40px] md:flex md:px-[40px] md:gap-10">
+        <div className="mb-[40px] md:max-w-xs">
           <h2 className="text-[30px] mb-[20px] font-bold">
             Local Searches Are Booming
           </h2>
@@ -112,26 +111,34 @@ export default function Home() {
           </button>
         </div>
 
-        <div>
+        <div className="flex justify-center items-center">
           <Image
             src="/assets/local-search-map.webp"
             alt="local search map"
             width={250}
             height={191}
+            className="md:hidden"
+          />
+          <Image
+            src="/assets/local-search-map.webp"
+            alt="local search map"
+            width={330}
+            height={253}
+            className="md:block"
           />
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section className="text-center bg-[#F1F4F9] px-[20px] py-[40px]">
-        <div className="leading-none mb-[40px]">
+      <section className="text-center bg-[#F1F4F9] px-[20px] py-[40px] md:flex md:justify-around md:items-center md:px-[40px] md:gap-10">
+        <div className="leading-none mb-[40px] md:m-w-xs">
           <h2 className="text-[48px] font-bold">Idris Elijah</h2>
           <p className="text-[24px] text-[#FF9801] font-light">
             Hot Local Leads
           </p>
         </div>
 
-        <div>
+        <div className="md:max-w-xs">
           <h2 className="text-[30px] mb-[20px] font-bold">How It Works</h2>
           <p className="para-text mb-[10px]">
             <span className="font-bold">Attract more leads</span> with my
@@ -148,9 +155,10 @@ export default function Home() {
       </section>
 
       {/* Strategy section */}
-      <section className="text-center px-[20px] py-[40px]">
-        <div className="flex flex-col justify-center items-center">
-          <div className="mb-[40px]">
+      <section className="text-center px-[20px] py-[40px] md:px-[40px]">
+        {/* Organic visibility section */}
+        <div className="text-center md:flex md:justify-center md:items-center md:gap-10">
+          <div className="mb-[40px] md:max-w-xs">
             <h2 className="text-[30px] font-bold mb-[40px]">
               Organic Visibility
             </h2>
@@ -169,18 +177,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
+          <div className="flex justify-center items-center">
             <Image
               src="/assets/personal-trainer-search.webp"
               alt="personal trainer search"
               width={250}
               height={163}
+              className="md:hidden"
+            />
+            <Image
+              src="/assets/personal-trainer-search.webp"
+              alt="personal trainer search"
+              width={360}
+              height={235}
+              className="md:block"
             />
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
-          <div className="mb-[40px]">
+        {/* Click to call section */}
+        <div className="text-center md:flex md:justify-center md:items-center md:gap-10">
+          <div className="mb-[40px] md:max-w-xs md:order-2">
             <h2 className="text-[30px] font-bold my-[40px]">Click To Call</h2>
             <p className="para-text">
               In addition to boosting your organic rankings, I also upgrade your
@@ -189,18 +206,27 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
+          <div className="md:order-1">
             <Image
               src="/assets/pd-customer-calls.webp"
               alt="pd customer calls"
               width={250}
               height={163}
+              className="md:hidden"
+            />
+            <Image
+              src="/assets/pd-customer-calls.webp"
+              alt="pd customer calls"
+              width={360}
+              height={235}
+              className="md:block"
             />
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
-          <div className="mb-[40px]">
+        {/* Online authority section */}
+        <div className="text-center md:flex md:justify-center md:items-center md:gap-10">
+          <div className="mb-[40px] md:max-w-xs">
             <h2 className="text-[30px] font-bold my-[40px]">
               Online Authority
             </h2>
@@ -222,70 +248,96 @@ export default function Home() {
               alt="responsive web design"
               width={250}
               height={156}
+              className="md:hidden"
+            />
+            <Image
+              src="/assets/responsive-web-design.webp"
+              alt="responsive web design"
+              width={360}
+              height={235}
+              className="md:block"
             />
           </div>
         </div>
       </section>
 
       {/* Guarantee Section */}
-      <section className="flex flex-col justify-center items-center bg-[#F1F4F9] text-center px-[20px] py-[40px]">
+      <section className="bg-[#F1F4F9] px-[20px] py-[40px] text-center md:flex md:justify-center md:items-center md:gap-10">
         <div className="flex flex-col justify-center items-center mb-[40px]">
           <Image
             src="/assets/results-guaranteed.webp"
             alt="results guaranteed"
             width={250}
             height={250}
+            className="md:hidden"
+          />
+          <Image
+            src="/assets/results-guaranteed.webp"
+            alt="results guaranteed"
+            width={300}
+            height={300}
+            className="md:block"
           />
         </div>
 
-        <div>
-          <h2 className="text-[30px] font-bold mb-[20px]">
-            Our Performance Guarantee
-          </h2>
-          <p className="para-text font-bold mb-[10px]">
-            I guarantee you will get at least 15 qualified leads per month
-            within 6 months of working with me. Or I&apos;ll work with you for
-            free until we do.
-          </p>
-          <p className="para-text mb-[20px]">
-            Since we guarantee a significant boost in your business, we
-            prescreen our partners before getting started. We need to verify how
-            many leads per month your business can handle, and that your team
-            will be available to respond promptly to the leads we send you.
-          </p>
+        <div className="md:max-w-xs">
+          <div>
+            <h2 className="text-[30px] font-bold mb-[20px]">
+              Our Performance Guarantee
+            </h2>
+            <p className="para-text font-bold mb-[10px]">
+              I guarantee you will get at least 15 qualified leads per month
+              within 6 months of working with me. Or I&apos;ll work with you for
+              free until we do.
+            </p>
+            <p className="para-text mb-[20px]">
+              Since we guarantee a significant boost in your business, we
+              prescreen our partners before getting started. We need to verify
+              how many leads per month your business can handle, and that your
+              team will be available to respond promptly to the leads we send
+              you.
+            </p>
+          </div>
+          <button className="primary-button w-[280px] h-[45px] px-0">
+            <Image
+              src="/assets/right-arrow.png"
+              alt="right arrow"
+              width={19}
+              height={16}
+            />
+            Get Your Marketing Blueprint
+          </button>
         </div>
-        <button className="primary-button w-[280px] h-[45px]">
-          <Image
-            src="/assets/right-arrow.png"
-            alt="right arrow"
-            width={19}
-            height={16}
-          />
-          Get Your Marketing Blueprint
-        </button>
       </section>
 
       {/* About Me Section */}
-      <section className="flex flex-col justify-center items-center text-center px-[20px] py-[40px]">
-        <div>
+      <section className="text-center px-[20px] py-[40px] md:flex md:justify-center md:items-center md:px-[40px] md:gap-10">
+        <div className="order-2">
           <Image
             src="/assets/about-me.jpeg"
             alt="idris elijah"
             width={250}
             height={250}
-            className="rounded-full mb-[40px]"
+            className="rounded-full mb-[40px] md:hidden"
+          />
+          <Image
+            src="/assets/about-me.jpeg"
+            alt="idris elijah"
+            width={325}
+            height={325}
+            className="rounded-full mb-[40px] md:block"
           />
         </div>
 
-        <div>
+        <div className="order-1 md:max-w-xs text-center">
           <h2 className="text-[30px] font-bold mb-[20px]">About Me</h2>
-          <p className="para-text mb-[20px]">
+          <p className="para-text mb-[10px]">
             My name is Idris Elijah, and I specifically help business
             professionals <span className="font-bold">land local clients</span>{' '}
             without feeling like they&apos;re gambling their money with
             garden-variety web agencies.
           </p>
-          <p className="para-text mb-[20px]">
+          <p className="para-text mb-[10px]">
             If you want to increase your visibility, build trust, and
             differentiate your business from the competition, even if
             they&apos;ve been around longer than you have, this is for you.
@@ -319,7 +371,7 @@ export default function Home() {
               height={250}
               className="rounded-full mb-[20px]"
             />
-            <p className="para-text mb-[10px]">
+            <p className="para-text mb-[10px] md:max-w-[317px]">
               I knew within 5 minutes that you were the one for the job, but
               this exceeds even my wildest dreams! I&apos;m blown away!
             </p>
@@ -334,7 +386,7 @@ export default function Home() {
               height={250}
               className="rounded-full mb-[20px]"
             />
-            <p className="para-text mb-[10px]">
+            <p className="para-text mb-[10px] md:max-w-[317px]">
               I knew within 5 minutes that you were the one for the job, but
               this exceeds even my wildest dreams! I&apos;m blown away!
             </p>
@@ -349,7 +401,7 @@ export default function Home() {
               height={250}
               className="rounded-full mb-[20px]"
             />
-            <p className="para-text mb-[10px]">
+            <p className="para-text mb-[10px] md:max-w-[317px]">
               I knew within 5 minutes that you were the one for the job, but
               this exceeds even my wildest dreams! I&apos;m blown away!
             </p>
@@ -371,8 +423,8 @@ export default function Home() {
       </section>
 
       {/* Ideal Client Section */}
-      <section className="text-center px-[20px] py-[40px]">
-        <div className="mb-[40px]">
+      <section className="text-center px-[20px] py-[40px] md:flex md:justify-center md:items-center md:gap-10 md:px-0">
+        <div className="mb-[40px] md:max-w-xs">
           <h2 className="text-[30px] font-bold mb-[40px]">Who This Is For</h2>
           <p className="para-text mb-[10px]">
             If you need customers from within driving distance of your location,
@@ -414,9 +466,9 @@ export default function Home() {
       </section>
 
       {/* Marketing Blueprint Section */}
-      <section className="flex flex-col justify-center items-center text-center px-[20px] py-[40px] bg-[#F1F4F9]">
-        <div className="mb-[40px]">
-          <div className="mb-[40px]">
+      <section className="px-[20px] py-[40px] bg-[#F1F4F9] md:px-[40px]">
+        <div className="mb-[40px] md:flex md:justify-around">
+          <div className="mb-[40px] md:max-w-xs">
             <h2 className="text-[30px] font-bold mb-[40px]">
               Get Your Marketing Blueprint
             </h2>
@@ -462,13 +514,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div>
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/idriselijah/marketing-blueprint"
-            style={{ height: 1050 }}
-          ></div>
-        </div>
+        <div></div>
       </section>
     </main>
   )
