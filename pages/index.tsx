@@ -514,6 +514,8 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* Calendly inline widget */}
         <div></div>
       </section>
     </main>
