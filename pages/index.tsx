@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { Link } from 'react-scroll'
+import { InlineWidget } from 'react-calendly'
 
 export default function Home() {
   return (
@@ -550,7 +551,12 @@ export default function Home() {
         </div>
 
         {/* Calendly inline widget */}
-        <div></div>
+        <div>
+          <InlineWidget
+            url="https://calendly.com/idriselijah/marketing-blueprint"
+            styles={{ height: '1000px' }}
+          />
+        </div>
       </section>
     </main>
   )
