@@ -1,6 +1,6 @@
-import HeaderNav from '@/components/HeaderNav'
 import Image from 'next/image'
 import Head from 'next/head'
+import { Link } from 'react-scroll'
 
 export default function Home() {
   return (
@@ -12,7 +12,26 @@ export default function Home() {
           async
         ></script>
       </Head>
-      <HeaderNav />
+
+      {/* Navigation area */}
+      <nav className="text-center p-[20px] md:flex md:justify-between md:items-center md:px-[40px] lg:mx-auto lg:max-w-6xl">
+        <p className="text-[36px] mb-[20px] md:mb-[0px]">Idris Elijah</p>
+        <div className="flex justify-center items-center">
+          <Link to="blueprint" smooth={true} duration={2000}>
+            <button className="primary-button w-[280px] h-[45px]">
+              <Image
+                src="/assets/right-arrow.png"
+                alt="right arrow"
+                width={19}
+                height={16}
+              />
+              Get Your Marketing Blueprint
+            </button>
+          </Link>
+        </div>
+      </nav>
+
+      {/* Hero section */}
       <section className="bg-[url('/assets/hero-image.jpg')] bg-[#1E2D44] bg-opacity-60 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
         <h1 className="text-[36px]">Hot Local Leads</h1>
         <p className="text-[24px]">Guaranteed</p>
@@ -102,15 +121,17 @@ export default function Home() {
           <p className="para-text mb-[20px] font-bold">
             I&apos;ll get you a bigger piece of this pie.
           </p>
-          <button className="primary-button w-[280px] h-[45px]">
-            <Image
-              src="/assets/right-arrow.png"
-              alt="right arrow"
-              width={19}
-              height={16}
-            />
-            Get Your Marketing Blueprint
-          </button>
+          <Link to="blueprint" smooth={true} duration={2000}>
+            <button className="primary-button w-[280px] h-[45px]">
+              <Image
+                src="/assets/right-arrow.png"
+                alt="right arrow"
+                width={19}
+                height={16}
+              />
+              Get Your Marketing Blueprint
+            </button>
+          </Link>
         </div>
 
         <div className="flex justify-center items-center">
@@ -246,7 +267,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='flex justify-center items-center'>
+          <div className="flex justify-center items-center">
             <Image
               src="/assets/responsive-web-design.webp"
               alt="responsive web design"
@@ -267,7 +288,7 @@ export default function Home() {
 
       {/* Guarantee Section */}
       <section className="bg-[#F1F4F9]">
-        <div className='px-[20px] py-[40px] text-center md:flex md:justify-center md:items-center md:gap-10 lg:gap-[126px]'>
+        <div className="px-[20px] py-[40px] text-center md:flex md:justify-center md:items-center md:gap-10 lg:gap-[126px]">
           <div className="flex flex-col justify-center items-center mb-[40px]">
             <Image
               src="/assets/results-guaranteed.webp"
@@ -303,15 +324,17 @@ export default function Home() {
                 you.
               </p>
             </div>
-            <button className="primary-button w-[280px] h-[45px] px-0">
-              <Image
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                width={19}
-                height={16}
-              />
-              Get Your Marketing Blueprint
-            </button>
+            <Link to="blueprint" smooth={true} duration={2000}>
+              <button className="primary-button w-[280px] h-[45px] px-0">
+                <Image
+                  src="/assets/right-arrow.png"
+                  alt="right arrow"
+                  width={19}
+                  height={16}
+                />
+                Get Your Marketing Blueprint
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -368,7 +391,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className='lg:flex lg:gap-20'>
+        <div className="lg:flex lg:gap-20">
           <div className="flex flex-col justify-center items-center mb-[40px]">
             <Image
               src="/assets/wiley.jpg"
@@ -416,15 +439,17 @@ export default function Home() {
         </div>
 
         <div className="mt-[40px]">
-          <button className="primary-button w-[280px] h-[45px]">
-            <Image
-              src="/assets/right-arrow.png"
-              alt="right arrow"
-              width={19}
-              height={16}
-            />
-            Get Your Marketing Blueprint
-          </button>
+          <Link to="blueprint" smooth={true} duration={2000}>
+            <button className="primary-button w-[280px] h-[45px]">
+              <Image
+                src="/assets/right-arrow.png"
+                alt="right arrow"
+                width={19}
+                height={16}
+              />
+              Get Your Marketing Blueprint
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -472,7 +497,10 @@ export default function Home() {
       </section>
 
       {/* Marketing Blueprint Section */}
-      <section className="px-[20px] py-[40px] bg-[#F1F4F9] md:px-[40px]">
+      <section
+        className="px-[20px] py-[40px] bg-[#F1F4F9] md:px-[40px]"
+        id="blueprint"
+      >
         <div className="text-center mb-[40px] md:flex md:justify-around max-w-6xl mx-auto">
           <div className="mb-[40px] md:max-w-xs lg:max-w-md">
             <h2 className="text-[30px] font-bold mb-[40px]">
