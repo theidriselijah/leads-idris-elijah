@@ -101,7 +101,7 @@ export default function Home() {
                 value={formData.email}
                 required
                 autoComplete="on"
-                className="bg-[#FCFCFC] text-[#1E2D44] text-center rounded w-full h-[39px] mb-[20px] text-[15px]"
+                className="bg-[#FCFCFC] text-[#1E2D44] text-center rounded w-full h-[39px] mb-[20px] text-[15px] focus:outline-none"
               />
               <button
                 type="submit"
