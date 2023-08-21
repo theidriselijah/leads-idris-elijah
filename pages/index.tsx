@@ -46,6 +46,11 @@ export default function Home() {
     <main>
       <Head>
         <title>Idris Elijah - Hot Local Leads</title>
+        <meta
+          name="description"
+          content="I help local business get more traffic, more leads, more clients, and more revenue."
+        />
+        <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
         <script
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
@@ -75,8 +80,8 @@ export default function Home() {
 
       {/* Hero section */}
       <section className="bg-[url('/assets/hero-image.jpg')] bg-[#1E2D44] bg-opacity-60 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
-        <h1 className="text-[36px]">Hot Local Leads</h1>
-        <p className="text-[24px]">Guaranteed</p>
+        <h1 className="text-[36px] md:text-[60px]">Hot Local Leads</h1>
+        <p className="text-[24px] md:text-[38px]">Guaranteed</p>
       </section>
 
       {/* Lead Magnet section */}
