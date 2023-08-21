@@ -45,6 +45,7 @@ export default function Home() {
   return (
     <main>
       <Head>
+        <title>Idris Elijah - Hot Local Leads</title>
         <script
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
