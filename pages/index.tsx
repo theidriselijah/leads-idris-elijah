@@ -54,7 +54,9 @@ export default function Home() {
 
       {/* Navigation area */}
       <nav className="text-center p-[20px] md:flex md:justify-between md:items-center md:px-[40px] lg:mx-auto lg:max-w-6xl">
-        <p className="text-[36px] mb-[20px] md:mb-[0px]">Idris Elijah</p>
+        <p className="text-[36px] font-bold mb-[20px] md:mb-[0px]">
+          Idris Elijah
+        </p>
         <div className="flex justify-center items-center">
           <Link to="blueprint" smooth={true} duration={2000}>
             <button className="primary-button w-[280px] h-[45px]">
@@ -110,11 +112,9 @@ export default function Home() {
               >
                 Claim Your Free Setup
               </button>
-              <div className='flex justify-center'>
+              <div className="flex justify-center">
                 {formData.message.length > 0 && (
-                  <p
-                    className="bg-[#698C40] text-center text-sm mt-3 w-[300px] rounded-[5px] p-2"
-                  >
+                  <p className="bg-[#698C40] text-center text-sm mt-3 w-[300px] rounded-[5px] p-2">
                     {formData.message}
                   </p>
                 )}
@@ -451,49 +451,32 @@ export default function Home() {
         </div>
 
         <div className="lg:flex lg:gap-20">
-          <div className="flex flex-col justify-center items-center mb-[40px]">
-            <Image
-              src="/assets/wiley.jpg"
-              alt="wiley"
-              width={250}
-              height={250}
-              className="rounded-full mb-[20px]"
-            />
+          <div className="flex flex-col justify-center items-center my-[40px]">
             <p className="para-text mb-[10px] md:max-w-[317px]">
-              I knew within 5 minutes that you were the one for the job, but
-              this exceeds even my wildest dreams! I&apos;m blown away!
+              Reliable and trustworthy! Idris earned my trust from day one. He
+              consistently delivered on promises, making my website project a
+              stress-free and enjoyable experience. I look forward to working
+              with him more in the future!
             </p>
-            <p className="para-text font-bold">Dr. Jimmy Wiley M.D.</p>
+            <p className="para-text font-bold">Brian K.</p>
           </div>
 
-          <div className="flex flex-col justify-center items-center mb-[40px]">
-            <Image
-              src="/assets/randy.jpg"
-              alt="randy"
-              width={250}
-              height={250}
-              className="rounded-full mb-[20px]"
-            />
+          <div className="flex flex-col justify-center items-center my-[40px]">
             <p className="para-text mb-[10px] md:max-w-[317px]">
-              I knew within 5 minutes that you were the one for the job, but
-              this exceeds even my wildest dreams! I&apos;m blown away!
+              Exceptional customer service! Working with Idris was a breeze. He
+              was responsive, accommodating and went the extra mile to ensure
+              our website was perfect. A truly dedicated professional!
             </p>
-            <p className="para-text font-bold">Dr. Jimmy Wiley M.D.</p>
+            <p className="para-text font-bold">Sandra Logue</p>
           </div>
 
-          <div className="flex flex-col justify-center items-center">
-            <Image
-              src="/assets/grace.jpg"
-              alt="grace"
-              width={250}
-              height={250}
-              className="rounded-full mb-[20px]"
-            />
+          <div className="flex flex-col justify-center items-center my-[40px]">
             <p className="para-text mb-[10px] md:max-w-[317px]">
-              I knew within 5 minutes that you were the one for the job, but
-              this exceeds even my wildest dreams! I&apos;m blown away!
+              Absolutely thrilled with the stunning website design created by
+              Idris! He captured our brand perfectly and delivered beyond our
+              expectations. Highly recommended!
             </p>
-            <p className="para-text font-bold">Dr. Jimmy Wiley M.D.</p>
+            <p className="para-text font-bold">Dominique Gebert</p>
           </div>
         </div>
 
