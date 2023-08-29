@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Head from 'next/head'
+import Script from 'next/script'
 import { Link } from 'react-scroll'
 import { InlineWidget } from 'react-calendly'
 import { useState } from 'react'
@@ -51,12 +52,12 @@ export default function Home() {
           content="I help local business get more traffic, more leads, more clients, and more revenue."
         />
         <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        ></script>
       </Head>
+      <Script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></Script>
 
       {/* Navigation area */}
       <nav className="text-center p-[20px] md:flex md:justify-between md:items-center md:px-[40px] lg:mx-auto lg:max-w-6xl">
