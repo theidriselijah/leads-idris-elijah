@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-RM2DRXGZ3P`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', 'G-RM2DRXGZ3P');
+          gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
         `}
       </Script>
 
