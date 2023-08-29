@@ -52,6 +52,22 @@ export default function Home() {
           content="I help local business get more traffic, more leads, more clients, and more revenue."
         />
         <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <Script
         type="text/javascript"
