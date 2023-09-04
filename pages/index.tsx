@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>Idris Elijah - Hot Local Leads</title>
+        <title>Idris Elijah - Lead Generation For Local Businesses</title>
         <meta
           name="description"
           content="I specialize in lead generation for business owners looking for local leads. I cover everything from web design, search engine optimization, email list building, and your social media presence to make sure you have a pipeline of well-qualified leads. Most of my clients aren't sure what online strategies are working the best right now, and even if they knew what to do, they don't have the time to do it. If you're a business owner looking for local leads but already feel stretched so thin you might snap, we should talk."
@@ -96,11 +96,11 @@ export default function Home() {
       </nav>
 
       {/* Hero section */}
-      <section className="bg-[url('/assets/hero-image.jpg')] bg-[#1E2D44] bg-opacity-60 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
-        <h1 className="text-[36px] md:text-[60px]">
+      <section className="bg-[url('/assets/hero-image.jpg')] bg-[#1E2D44] bg-opacity-80 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
+        <h1 className="text-[36px] md:text-[60px] max-w-2xl text-[#FF9801] font-bold">
           Lead Generation For Local Businesses
         </h1>
-        <p className="text-[24px] md:text-[38px]">
+        <p className="text-[24px] md:text-[38px] max-w-md">
           We build the bridge from click to client.
         </p>
       </section>
