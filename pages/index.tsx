@@ -96,7 +96,7 @@ export default function Home() {
       </nav>
 
       {/* Hero section */}
-      <section className="bg-[url('/assets/hero-image.jpg')] bg-[#1E2D44] bg-opacity-80 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
+      <section className="bg-[url('/assets/hero-image.webp')] bg-[#1E2D44] bg-opacity-80 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF]">
         <h1 className="text-[36px] md:text-[60px] max-w-2xl text-[#FF9801] font-bold">
           Lead Generation For Local Businesses
         </h1>
