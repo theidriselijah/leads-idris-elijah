@@ -53,7 +53,6 @@ export default function Home() {
         <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
         <script
           defer={true}
-          async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
         />
         <script
@@ -71,7 +70,6 @@ export default function Home() {
         <script
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
-          async
           defer={true}
         ></script>
       </Head>
