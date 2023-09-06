@@ -1,46 +1,14 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { Link } from 'react-scroll'
-import { InlineWidget } from 'react-calendly'
+import CalendlyInlineWidget from '@/components/CalendlyInlineWidget'
 import { useState } from 'react'
+import NavArea from '@/components/NavArea'
+import HeroSection from '@/components/HeroSection'
+import GoogleSetupForm from '@/components/GoogleSetupForm'
 
 export default function Home() {
-  const initialFormData = {
-    email: '',
-    message: '',
-  }
-
-  const [formData, setFormData] = useState(initialFormData)
-
-  function handleChange(event: any) {
-    const { name, value } = event.target
-
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: value,
-      }
-    })
-  }
-
-  async function subscribeUser(event: any) {
-    event.preventDefault()
-    const res = await fetch('/api/convertkitSubscribe', {
-      body: JSON.stringify({ email: formData.email }),
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      method: 'POST',
-    })
-
-    const json_res = await res.json()
-
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        message: json_res.message,
-        email: '',
-      }
-    })
-  }
+  
 
   return (
     <main>
@@ -71,34 +39,10 @@ export default function Home() {
       </Head>
 
       {/* Navigation area */}
-      <nav className="text-center p-[20px] md:flex md:justify-between md:items-center md:px-[40px] lg:mx-auto lg:max-w-6xl">
-        <p className="text-[36px] font-bold mb-[20px] md:mb-[0px]">
-          Idris Elijah
-        </p>
-        <div className="flex justify-center items-center">
-          <Link to="blueprint" smooth={true} duration={2000}>
-            <button className="primary-button w-[280px] h-[45px]">
-              <Image
-                src="/assets/right-arrow.png"
-                alt="right arrow"
-                width={19}
-                height={16}
-              />
-              Get Your Marketing Blueprint
-            </button>
-          </Link>
-        </div>
-      </nav>
+      <NavArea />
 
       {/* Hero section */}
-      <section className="bg-[url('/assets/hero-image.webp')] bg-[#1E2D44] bg-opacity-80 bg-blend-overlay bg-[center_top_-13.5rem] bg-no-repeat w-full h-[422px] flex flex-col justify-center items-center text-center text-[#FFFFFF] px-[20px]">
-        <h1 className="text-[36px] md:text-[60px] md:max-w-2xl text-[#FF9801] font-bold">
-          Lead Generation For Local Businesses
-        </h1>
-        <p className="text-[24px] max-w-xs md:text-[38px] md:max-w-md">
-          I build the bridge from click to client.
-        </p>
-      </section>
+      <HeroSection />
 
       {/* Lead Magnet section */}
       <section className="bg-[#1E2D44] text-[#FFFFFF] text-center px-[20px] py-[40px] md:px-[40px] lg:px-[126px]">
@@ -115,33 +59,7 @@ export default function Home() {
               for maximum visibility. Totally free - no strings attached.
             </p>
 
-            <form onSubmit={subscribeUser} className="mb-[20px]">
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter Your Email"
-                name="email"
-                onChange={handleChange}
-                value={formData.email}
-                required
-                autoComplete="on"
-                className="bg-[#FCFCFC] text-[#1E2D44] text-center rounded w-full h-[39px] mb-[20px] text-[15px] focus:outline-none"
-              />
-              <button
-                type="submit"
-                name="email"
-                className="secondary-button w-[258px] h-[42px] text-[17px]"
-              >
-                Claim Your Free Setup
-              </button>
-              <div className="flex justify-center">
-                {formData.message.length > 0 && (
-                  <p className="bg-[#698C40] text-center text-sm mt-3 w-[300px] rounded-[5px] p-2">
-                    {formData.message}
-                  </p>
-                )}
-              </div>
-            </form>
+            <GoogleSetupForm />
 
             <p className="text-[14px]">
               I&apos;ll contact you within one business day to complete your
@@ -615,10 +533,7 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          <InlineWidget
-            url="https://calendly.com/idriselijah/marketing-blueprint"
-            styles={{ height: '1000px' }}
-          />
+          <CalendlyInlineWidget />
         </div>
       </section>
     </main>
