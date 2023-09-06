@@ -102,7 +102,7 @@ export default function Home() {
           Lead Generation For Local Businesses
         </h1>
         <p className="text-[24px] max-w-xs md:text-[38px] md:max-w-md">
-          We build the bridge from click to client.
+          I build the bridge from click to client.
         </p>
       </section>
 
