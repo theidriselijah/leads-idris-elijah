@@ -53,13 +53,13 @@ export default function Home() {
         <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
         <link
           rel="preconnect"
-          href="https://www.gstatic.com/recaptcha/releases/"
+          href="https://www.gstatic.com/"
         />
         <link
           rel="preconnect"
-          href="https://assets.calendly.com/assets/booking/js"
+          href="https://assets.calendly.com/"
         />
-        <link rel="preconnect" href="https://www.googletagmanager.com/gtag/" />
+        <link rel="preconnect" href="https://www.googletagmanager.com/" />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
