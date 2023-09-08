@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { Link } from 'react-scroll'
 import CalendlyInlineWidget from '@/components/CalendlyInlineWidget'
-
 import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
@@ -34,9 +33,9 @@ export default function Home() {
           }}
         />
         <script
+          defer={true}
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
-          defer={true}
         ></script>
       </Head>
 
