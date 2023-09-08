@@ -125,7 +125,7 @@ export default function Home() {
           <Link to="blueprint" smooth={true} duration={2000}>
             <button className="primary-button w-[280px] h-[45px]">
               <Image
-                src="/assets/right-arrow.png"
+                src="/assets/right-arrow.webp"
                 alt="right arrow"
                 width={19}
                 height={16}
@@ -328,7 +328,7 @@ export default function Home() {
             <Link to="blueprint" smooth={true} duration={2000}>
               <button className="primary-button w-[280px] h-[45px] px-0">
                 <Image
-                  src="/assets/right-arrow.png"
+                  src="/assets/right-arrow.webp"
                   alt="right arrow"
                   width={19}
                   height={16}
@@ -344,14 +344,14 @@ export default function Home() {
       <section className="text-center px-[20px] py-[40px] md:flex md:justify-center md:items-center md:px-[40px] md:gap-10 lg:gap-[126px]">
         <div className="flex justify-center items-center order-2">
           <Image
-            src="/assets/about-me.jpeg"
+            src="/assets/about-me.webp"
             alt="idris elijah"
             width={250}
             height={250}
             className="rounded-full mb-[40px] md:hidden"
           />
           <Image
-            src="/assets/about-me.jpeg"
+            src="/assets/about-me.webp"
             alt="idris elijah"
             width={325}
             height={325}
@@ -426,7 +426,7 @@ export default function Home() {
           <Link to="blueprint" smooth={true} duration={2000}>
             <button className="primary-button w-[280px] h-[45px]">
               <Image
-                src="/assets/right-arrow.png"
+                src="/assets/right-arrow.webp"
                 alt="right arrow"
                 width={19}
                 height={16}
@@ -518,14 +518,14 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center">
             <Image
-              src="/assets/google-calendar-icon.png"
+              src="/assets/google-calendar-icon.webp"
               alt="google calendar incon"
               width={250}
               height={250}
               className="mb-[40px]"
             />
             <Image
-              src="/assets/down-arrow.png"
+              src="/assets/down-arrow.webp"
               alt="down arrow"
               width={33}
               height={41}

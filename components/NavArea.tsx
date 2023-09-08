@@ -12,7 +12,7 @@ export default function NavArea() {
           <Link to="blueprint" smooth={true} duration={2000}>
             <button className="primary-button w-[280px] h-[45px]">
               <Image
-                src="/assets/right-arrow.png"
+                src="/assets/right-arrow.webp"
                 alt="right arrow"
                 width={19}
                 height={16}
