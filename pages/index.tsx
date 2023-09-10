@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic'
 const DynamicCalendly = dynamic(
   () => import('../components/CalendlyInlineWidget'),
   {
+    ssr: false,
     loading: () => <p>Loading...</p>,
   }
 )
