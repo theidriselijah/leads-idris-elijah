@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { Link } from 'react-scroll'
-import CalendlyInlineWidget from '@/components/CalendlyInlineWidget'
 import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
+import dynamic from 'next/dynamic'
+
+const DynamicCalendly = dynamic(() => import('@/components/CalendlyInlineWidget'))
 
 export default function Home() {
   return (
@@ -534,7 +536,7 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          <CalendlyInlineWidget />
+          <DynamicCalendly />
         </div>
       </section>
     </main>
