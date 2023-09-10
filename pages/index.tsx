@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-        strategy='afterInteractive'
+        strategy='lazyOnload'
       />
       <Script
         type="text/javascript"
