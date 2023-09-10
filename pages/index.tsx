@@ -6,7 +6,9 @@ import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
 import dynamic from 'next/dynamic'
 
-const DynamicCalendly = dynamic(() => import('@/components/CalendlyInlineWidget'))
+const DynamicCalendly = dynamic(() => import('../components/CalendlyInlineWidget'), {
+  ssr: false,
+})
 
 export default function Home() {
   return (
