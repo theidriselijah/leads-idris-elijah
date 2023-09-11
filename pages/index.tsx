@@ -5,16 +5,19 @@ import { Link } from 'react-scroll'
 import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 import { Partytown } from '@builder.io/partytown/react'
+import { Suspense } from 'react'
 
-// const DynamicCalendly = dynamic(
-//   () => import('../components/CalendlyInlineWidget'),
-//   {
-//     ssr: false,
-//     loading: () => <p>Loading...</p>,
-//   }
-// )
+const DynamicCalendly = dynamic(
+  () => import('../components/CalendlyInlineWidget'),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  }
+)
+
+const DynamicLoading = dynamic(() => import('../components/Loading'))
 
 export default function Home() {
   return (
@@ -43,12 +46,12 @@ export default function Home() {
       </Head>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-        strategy='worker'
+        strategy="worker"
       />
       <Script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy='worker'
+        strategy="worker"
       ></Script>
 
       {/* Navigation area */}
@@ -546,7 +549,9 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          {/* <DynamicCalendly /> */}
+          <Suspense fallback={<DynamicLoading />}>
+            <DynamicCalendly />
+          </Suspense>
         </div>
       </section>
     </main>
