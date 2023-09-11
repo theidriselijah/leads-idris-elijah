@@ -40,16 +40,17 @@ export default function Home() {
             `,
           }}
         />
+        <script
+          async
+          type="text/partytown"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
+        />
+        <script
+          async
+          type="text/partytown"
+          src="https://assets.calendly.com/assets/external/widget.js"
+        ></script>
       </Head>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-        strategy='worker'
-      />
-      <Script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy='worker'
-      ></Script>
 
       {/* Navigation area */}
       <NavArea />
