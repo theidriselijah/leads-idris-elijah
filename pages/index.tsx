@@ -6,6 +6,7 @@ import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
 import dynamic from 'next/dynamic'
+import { Partytown } from '@builder.io/partytown/react'
 
 const DynamicCalendly = dynamic(
   () => import('../components/CalendlyInlineWidget'),
@@ -25,7 +26,9 @@ export default function Home() {
           content="I specialize in lead generation for business owners looking for local leads. I cover everything from web design, search engine optimization, email list building, and your social media presence to make sure you have a pipeline of well-qualified leads. Most of my clients aren't sure what online strategies are working the best right now, and even if they knew what to do, they don't have the time to do it. If you're a business owner looking for local leads but already feel stretched so thin you might snap, we should talk."
         />
         <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
+        <Partytown debug={true} forward={['dataLayer.push']} />
         <script
+          type="text/partytown"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -40,12 +43,10 @@ export default function Home() {
       </Head>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-        strategy="worker"
       />
       <Script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="worker"
       ></Script>
 
       {/* Navigation area */}
