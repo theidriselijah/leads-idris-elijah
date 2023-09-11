@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Head from 'next/head'
-import Script from 'next/script'
 import { Link } from 'react-scroll'
 import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
