@@ -42,12 +42,13 @@ export default function Home() {
         />
       </Head>
       <Script
-        type="text/partytown"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
+        strategy='worker'
       />
       <Script
-        type="text/partytown"
+        type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
+        strategy='worker'
       ></Script>
 
       {/* Navigation area */}
