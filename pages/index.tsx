@@ -17,7 +17,9 @@ const DynamicCalendly = dynamic(
   }
 )
 
-const DynamicLoading = dynamic(() => import('../components/Loading'))
+const DynamicLoading = dynamic(() => import('../components/Loading'), {
+  loading: () => <p>Loading...</p>
+})
 
 export default function Home() {
   return (
