@@ -7,7 +7,6 @@ import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
 import dynamic from 'next/dynamic'
 import { Partytown } from '@builder.io/partytown/react'
-import { Suspense } from 'react'
 
 const DynamicCalendly = dynamic(
   () => import('../components/CalendlyInlineWidget'),
@@ -16,10 +15,6 @@ const DynamicCalendly = dynamic(
     loading: () => <p>Loading...</p>,
   }
 )
-
-const DynamicLoading = dynamic(() => import('../components/Loading'), {
-  loading: () => <p>Loading...</p>
-})
 
 export default function Home() {
   return (
@@ -551,9 +546,7 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          <Suspense fallback={<DynamicLoading />}>
-            <DynamicCalendly />
-          </Suspense>
+          <DynamicCalendly />
         </div>
       </section>
     </main>
