@@ -40,12 +40,12 @@ export default function Home() {
       </Head>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
-        strategy="lazyOnload"
+        strategy="worker"
       />
       <Script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
+        strategy="worker"
       ></Script>
 
       {/* Navigation area */}
