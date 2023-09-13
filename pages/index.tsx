@@ -5,16 +5,16 @@ import { Link } from 'react-scroll'
 import NavArea from '@/components/NavArea'
 import HeroSection from '@/components/HeroSection'
 import GoogleSetupForm from '@/components/GoogleSetupForm'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import { Partytown } from '@builder.io/partytown/react'
+import CalendlyInlineWidget from '../components/CalendlyInlineWidget'
 
-const DynamicCalendar = dynamic(
-  () => import('../components/CalendlyInlineWidget'),
-  {
-    ssr: false,
-    loading: () => <p>Loading...</p>,
-  }
-)
+// const DynamicCalendar = dynamic(
+//   () => import('../components/CalendlyInlineWidget'),
+//   {
+//     loading: () => <p>Loading...</p>,
+//   }
+// )
 
 export default function Home() {
   return (
@@ -548,7 +548,7 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          <DynamicCalendar />
+          <CalendlyInlineWidget />
         </div>
       </section>
     </main>
