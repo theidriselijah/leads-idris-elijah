@@ -8,7 +8,7 @@ import GoogleSetupForm from '@/components/GoogleSetupForm'
 import dynamic from 'next/dynamic'
 import { Partytown } from '@builder.io/partytown/react'
 
-const DynamicCalendly = dynamic(
+const DynamicCalendar = dynamic(
   () => import('../components/CalendlyInlineWidget'),
   {
     ssr: false,
@@ -425,9 +425,11 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center my-[40px]">
             <p className="para-text mb-[10px] md:max-w-[317px]">
-              Absolutely thrilled with the stunning website design created by
-              Idris! He captured our brand perfectly and delivered beyond our
-              expectations. Highly recommended!
+              It&apos;s been a pleasure working with Idris. He took the time to truly
+              get to know our business and helped bring us quality leads in a
+              relatively short period of time. Idris is knowledgeable,
+              determined and most of all passionate about quality work. Thank
+              you Idris!
             </p>
             <p className="para-text font-bold">Dominique Gebert</p>
           </div>
@@ -546,7 +548,7 @@ export default function Home() {
 
         {/* Calendly inline widget */}
         <div>
-          <DynamicCalendly />
+          <DynamicCalendar />
         </div>
       </section>
     </main>
